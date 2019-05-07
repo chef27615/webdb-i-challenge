@@ -74,6 +74,15 @@ The following exercises require research, the concepts needed to complete them h
     `UPDATE Customers SET PostCode = '11122' WHERE CustomerName = 'The Shire'; `
 
 - delete all customers that have no orders. Should delete 18 records.
+
+    `DELETE FROM Customers WHERE Customers.CustomerId NOT IN (SELECT CustomerId FROM Orders);`
+
 - list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
+
+
+
 - list customers names and the number of orders per customer. Sort the list by number of orders in descending order. _Ernst Handel_ should be at the top with 10 orders followed by _QUICK-Stop_, _Rattlesnake Canyon Grocery_ and _Wartian Herkku_ with 7 orders each.
+
+    
+
 - list orders grouped by customer's city showing number of orders per city. Returns 58 Records with _Aachen_ showing 2 orders and _Albuquerque_ showing 7 orders.
